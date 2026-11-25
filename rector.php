@@ -11,4 +11,5 @@ return RectorConfig::configure()
         __DIR__ . '/rector.php'
     ])
     ->withPhpSets()
+    ->withComposerBased()
     ->withTypeCoverageLevel(0);
