@@ -3,8 +3,6 @@
 declare(strict_types=1);
 
 use Rector\Config\RectorConfig;
-use Rector\Set\ValueObject\LevelSetList;
-use Rector\Set\ValueObject\SetList;
 
 return RectorConfig::configure()
     ->withPaths([
@@ -12,9 +10,5 @@ return RectorConfig::configure()
         __DIR__ . '/tests',
         __DIR__ . '/rector.php'
     ])
-    // uncomment to reach your current PHP version
-    ->withSets([
-        SetList::PHP_72,
-        LevelSetList::UP_TO_PHP_72
-    ])
+    ->withPhpSets()
     ->withTypeCoverageLevel(0);
